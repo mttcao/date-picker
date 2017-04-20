@@ -11,8 +11,8 @@ const initialState = {
 };
 
 class SingleDatePickerWrapper extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = initialState;
   }
 
@@ -20,17 +20,20 @@ class SingleDatePickerWrapper extends React.Component {
 
     return (
       <div className="App-header margin-bottom-60">
-        <h3>2. Copy selected day(s) to</h3>
-        <SingleDatePicker
-          date={this.state.date} // momentPropTypes.momentObj or null
-          onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
-          focused={this.state.focused} // PropTypes.bool
-          onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
-          showClearDate={true}
-          placeholder={"Select Date"}
-          // reopenPickerOnClearDate={true}
-          // withPortal={true}
-        />
+        <h3 className="padding-bottom-10">2. Copy selected day(s) to</h3>
+        <label className="padding-left-10">Select starting date:</label>
+        <div>
+          <SingleDatePicker
+            date={this.state.date} // momentPropTypes.momentObj or null
+            onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
+            focused={this.state.focused} // PropTypes.bool
+            onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+            showClearDate={true}
+            placeholder={"Select Date"}
+            // reopenPickerOnClearDate={true}
+            // withPortal={true}
+          />
+        </div>
       </div>
     );
   }

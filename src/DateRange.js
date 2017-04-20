@@ -20,16 +20,20 @@ class DateRangePickerWrapper extends React.Component {
     // const { focusedInput, startDate, endDate } = this.state;
 
     return (
-      <div className="App-header">
-        <h3>1. Select day(s) to apply</h3>
-        <DateRangePicker
-            startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-            endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-            onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-            focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-            showClearDates={true}
-            />
+      <div>
+        <h3 className="padding-bottom-10">1. Select day(s) to apply</h3>
+        <span className="padding-left-20 padding-right-60"><label>From:</label></span>
+        <span className="padding-left-60"><label>To:</label></span>
+        <div>
+          <DateRangePicker
+              startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+              endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+              onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+              focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+              onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+              showClearDates={true}
+              />
+        </div>
       </div>
     );
   }
