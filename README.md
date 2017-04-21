@@ -14,3 +14,8 @@ This project was set up with [Create React App](https://github.com/facebookincub
 ```
 npm install
 ```
+
+### To Run:
+```
+npm start
+```
